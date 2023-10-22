@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  color: bisque !important;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.titre {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* margin: 0px auto; */
+  background-image: radial-gradient(circle, rgb(251, 243, 97), rgb(17, 76, 93));
+  border-radius: 15px;
+  color: black;
+}
+
+.champs {
+  min-width: 700px;
+  margin: 100px auto;
+  background-image: radial-gradient(circle, rgb(251, 243, 97), rgb(17, 76, 93));
+  border-radius: 15px;
+  animation: SlideDown 3s;
+}
+
+.check {
+  display: flex;
+  height: 40px !important;
+}
+
+.tableau {
+  min-width: 700px;
+  background-image: radial-gradient(circle, rgb(251, 243, 97), rgb(17, 76, 93));
+  border-radius: 15px;
+  animation: SlideUp 3s;
+}
+
+.btn {
+  border: none !important;
+  font-weight: bold !important;
+  color: black !important;
+}
+
+.btn:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(97, 218, 251),
+    rgb(17, 76, 93)
+  );
+  color: bisque !important;
+  transition: 1s !important;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+@keyframes SlideDown {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes SlideUp {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
