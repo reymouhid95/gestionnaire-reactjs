@@ -1,16 +1,19 @@
+// Importattion des bibliothèques nécessaires
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import * as Icon from "react-bootstrap-icons";
 
+// Composant principal défini à travers une fonction fléchée
 const UserTable = ({ users, editUser, deleteUser }) => {
   return (
+    // Render JSX
     <div className="tableau p-3">
       <h2 className="mb-4 fw-bold">Tableau d'affichage des étudiants !</h2>
       <Table striped bordered hover variant="warning">
         <thead>
           <tr>
-            <th>Nom</th>
             <th>Prénom</th>
+            <th>Nom</th>
             <th>Âge</th>
             <th>E-mail</th>
             <th>Module</th>
@@ -24,8 +27,8 @@ const UserTable = ({ users, editUser, deleteUser }) => {
               key={index}
               className={user.statut === "terminé" ? "completed" : ""}
             >
-              <td>{user.nom}</td>
               <td>{user.prenom}</td>
+              <td>{user.nom}</td>
               <td>{user.age}</td>
               <td>{user.email}</td>
               <td>{user.module}</td>

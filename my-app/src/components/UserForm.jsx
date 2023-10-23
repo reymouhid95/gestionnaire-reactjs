@@ -1,8 +1,10 @@
+// Importattion des bibliothèques nécessaires
 import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Row, Col } from "react-bootstrap";
 
+// Composant principal défini à travers une fonction fléchée
 const UserForm = ({ addUser, editingUser, updateUser }) => {
   const [user, setUser] = useState({
     nom: "",
@@ -13,6 +15,7 @@ const UserForm = ({ addUser, editingUser, updateUser }) => {
     statut: "en cours",
   });
 
+  // Surveiller les changements d'état des propriétés
   useEffect(() => {
     if (editingUser) {
       setUser(editingUser);
@@ -28,11 +31,13 @@ const UserForm = ({ addUser, editingUser, updateUser }) => {
     }
   }, [editingUser]);
 
+  //Fonction pour mettre à jour l'état à chaque fois que le champ modifié
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   };
 
+  // Fonction appelée quand le formulaire est soumis
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -53,6 +58,7 @@ const UserForm = ({ addUser, editingUser, updateUser }) => {
   };
 
   return (
+    // Render JSX
     <div className="champs p-3">
       <h2 className="mb-4 fw-bold">
         Champs à remplir pour ajouter un étudiant !
@@ -75,7 +81,7 @@ const UserForm = ({ addUser, editingUser, updateUser }) => {
               name="nom"
               value={user.nom}
               onChange={handleInputChange}
-              placeholder="nom"
+              placeholder="Nom"
               required
             />
           </Col>
