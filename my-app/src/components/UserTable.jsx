@@ -39,14 +39,14 @@ const UserTable = ({ users, editUser, deleteUser }) => {
                   onClick={() => editUser(user)}
                   className="mb-2 mx-2"
                 >
-                  <Icon.PencilSquare className="fs-4" />
+                  <Icon.PencilSquare className="fs-5" />
                 </Button>
                 <Button
                   variant="danger"
                   onClick={() => deleteUser(user)}
                   className="mb-2 mx-2"
                 >
-                  <Icon.Trash className="fs-4" />
+                  <Icon.Trash className="fs-5" />
                 </Button>
               </td>
             </tr>
