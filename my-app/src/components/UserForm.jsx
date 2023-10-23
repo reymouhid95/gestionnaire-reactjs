@@ -65,7 +65,7 @@ const UserForm = ({ addUser, editingUser, updateUser }) => {
       </h2>
       <Form onSubmit={handleSubmit}>
         <Row>
-          <Col md={4} sm={12} size="12" className="mb-3">
+          <Col md={4} sm={12} xs={12} className="mb-3">
             <Form.Control
               type="text"
               name="prenom"
@@ -75,7 +75,7 @@ const UserForm = ({ addUser, editingUser, updateUser }) => {
               required
             />
           </Col>
-          <Col md={4} sm={12} size="12" className="mb-3">
+          <Col md={4} sm={12} xs={12} className="mb-3">
             <Form.Control
               type="text"
               name="nom"
@@ -85,7 +85,7 @@ const UserForm = ({ addUser, editingUser, updateUser }) => {
               required
             />
           </Col>
-          <Col md={4} sm={12} size="12" className="mb-3">
+          <Col md={4} sm={12} xs={12} className="mb-3">
             <Form.Control
               type="number"
               name="age"
@@ -97,7 +97,7 @@ const UserForm = ({ addUser, editingUser, updateUser }) => {
           </Col>
         </Row>
         <Row>
-          <Col md={4} sm={12} size="12" className="mb-3">
+          <Col md={4} sm={12} xs={12} className="mb-3">
             <Form.Control
               type="email"
               name="email"
@@ -107,7 +107,7 @@ const UserForm = ({ addUser, editingUser, updateUser }) => {
               required
             />
           </Col>
-          <Col md={4} sm={12} size="12" className="mb-3">
+          <Col md={4} sm={12} xs={12} className="mb-3">
             <Form.Control
               type="text"
               name="module"
@@ -117,7 +117,7 @@ const UserForm = ({ addUser, editingUser, updateUser }) => {
               required
             />
           </Col>
-          <Col md={4} sm={12} size="12" className="mb-3">
+          <Col md={4} sm={12} xs={12} className="mb-3">
             <Form.Select
               name="statut"
               value={user.statut}
